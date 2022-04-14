@@ -30,4 +30,19 @@ pipeline:
                                         userGroups:
                                             - account.paul_group
                                     approverInputs: []
+                          - step:
+                                type: ShellScript
+                                name: bash script
+                                identifier: bash_script
+                                spec:
+                                    shell: Bash
+                                    onDelegate: true
+                                    source:
+                                        type: Inline
+                                        spec:
+                                            script: echo "hello from the Harness Git Experience"
+                                    environmentVariables: []
+                                    outputVariables: []
+                                    executionTarget: {}
+                                timeout: 10m
               tags: {}
