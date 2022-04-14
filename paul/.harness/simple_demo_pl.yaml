@@ -1,0 +1,33 @@
+pipeline:
+    name: simple demo pl
+    identifier: simple_demo_pl
+    allowStageExecutions: false
+    projectIdentifier: git_experience_project
+    orgIdentifier: default
+    tags: {}
+    stages:
+        - stage:
+              name: approval
+              identifier: approval
+              description: ""
+              type: Approval
+              spec:
+                  execution:
+                      steps:
+                          - step:
+                                name: Approval
+                                identifier: approval
+                                type: HarnessApproval
+                                timeout: 1d
+                                spec:
+                                    approvalMessage: |-
+                                        Please review the following information
+                                        and approve the pipeline progression
+                                    includePipelineExecutionHistory: true
+                                    approvers:
+                                        minimumCount: 1
+                                        disallowPipelineExecutor: false
+                                        userGroups:
+                                            - account.paul_group
+                                    approverInputs: []
+              tags: {}
