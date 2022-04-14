@@ -40,7 +40,7 @@ pipeline:
                                     source:
                                         type: Inline
                                         spec:
-                                            script: echo "hello from the Harness Git Experience"
+                                            script: echo "just making a change"
                                     environmentVariables: []
                                     outputVariables: []
                                     executionTarget: {}
