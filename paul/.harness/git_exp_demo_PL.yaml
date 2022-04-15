@@ -40,7 +40,7 @@ pipeline:
                                     source:
                                         type: Inline
                                         spec:
-                                            script: echo "Hello from Paul at Harness from branch1"
+                                            script: echo "Hello from Paul during Moody demo"
                                     environmentVariables: []
                                     outputVariables: []
                                     executionTarget: {}
