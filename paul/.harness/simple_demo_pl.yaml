@@ -40,7 +40,7 @@ pipeline:
                                     source:
                                         type: Inline
                                         spec:
-                                            script: echo "hello from pauls git demo"
+                                            script: echo "hello from Moody's demo"
                                     environmentVariables: []
                                     outputVariables: []
                                     executionTarget: {}
