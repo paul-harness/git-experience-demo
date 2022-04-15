@@ -46,3 +46,25 @@ pipeline:
                                     executionTarget: {}
                                 timeout: 10m
               tags: {}
+        - stage:
+              name: build
+              identifier: build
+              type: CI
+              spec:
+                  cloneCodebase: false
+                  infrastructure:
+                      type: KubernetesDirect
+                      spec:
+                          connectorRef: account.k8spaulkurl
+                          namespace: harness-delegate-ng
+                  execution:
+                      steps:
+                          - step:
+                                type: Run
+                                name: maven build
+                                identifier: maven_build
+                                spec:
+                                    connectorRef: account.Harness_Dockerhub
+                                    image: maven:latest
+                                    shell: Sh
+                                    command: mcn clean install
