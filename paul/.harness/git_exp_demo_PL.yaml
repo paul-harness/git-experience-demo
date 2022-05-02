@@ -47,7 +47,7 @@ pipeline:
                                 timeout: 10m
               tags: {}
         - stage:
-              name: another echo
+              name: another echo stage
               identifier: another_echo
               description: ""
               type: Approval
